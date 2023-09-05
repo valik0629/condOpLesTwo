@@ -20,43 +20,17 @@ public class Main {
          * переменную clientOS не будем объявлять заново, будем использовать ее из предыдущего примера
          */
                 int clientDeviceYear = 2015;
-                if(clientOS == 0) {
-                    if(clientDeviceYear >= 2015) {
-                        System.out.println("Установите версию приложения для iOS по ссылке.");
-                    } else {
-                        System.out.println("Установите ОБЛЕГЧЕННУЮ версию приложения для iOS по ссылке.");
-                    }
-                } else {
-                    if (clientDeviceYear >= 2015) {
-                        System.out.println("Установите версию приложения для Andriod по ссылке.");
-                    } else {
-                        System.out.println("Установите ОБЛЕГЧЕННУЮ версию приложения для Android по ссылке.");
-                    }
-                }
-        /**
-         * второй вариант решения этой же задачи
-          */
-                switch (clientOS) {
-                    case 0:
-                    {
-                        if (clientDeviceYear >= 2015) {
-                            System.out.println("Установите версию приложения для iOS по ссылке.");
-                        } else  {
-                            System.out.println("Установите ОБЛЕГЧЕННУЮ версию приложения для iOS по ссылке.");
-                        }
-                        break;
-                    }
-                    case 1:
-                    {
-                        if (clientDeviceYear >= 2015) {
-                            System.out.println("Установите версию приложения для Android по ссылке.");
-                        } else  {
-                            System.out.println("Установите ОБЛЕГЧЕННУЮ версию приложения для Android по ссылке.");
-                        }
-                        break;
-                    }
-
-                }
+                if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+        } else if (clientOS == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите ОБЛЕГЧЕННУЮ версию приложения для iOS по ссылке.");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке.");
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите ОБЛЕГЧЕННУЮ версию приложения для Android по ссылке.");
+        } else {
+            System.out.println("Что у Вас за устройство?");
+        }
 
         System.out.println("Задание 3");
         /**
@@ -66,17 +40,12 @@ public class Main {
          */
 
                  int year =  2021;
-                   if (year >= 1584) {
-                       // тут делаем другие проверки
-                       if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0 ) {
+                       if (year >= 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0 ) {
                            System.out.println("Год " + year + " високосный");
                        } else {
                            System.out.println("Год " + year + " не високосный");
                        }
 
-                   } else {
-                       System.out.println("В этом " + year + " году еще не было введено понятие викососности");
-                   }
         System.out.println("Задание 4");
         /**
          * Срок доставки кредитных карт
